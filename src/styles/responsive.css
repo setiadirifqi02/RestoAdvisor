@@ -1,0 +1,90 @@
+@media screen and (min-width:600px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+
+    }
+
+    .nav-item {
+        margin: 0 2.4rem;
+        border: none;
+
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 16px 14px;
+    }
+
+    .container{
+        padding: 0 2.4rem;
+    }
+    .katalog__label{
+        font-size: 1.6rem;
+    }
+
+    .restoran__section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail-restaurant .detail-main-menu__container{
+        flex-direction: row;
+    }
+
+    .detail-restaurant .detail-main-menu__container .detail-main__drinks{
+        margin-left: 60px;
+    }
+
+}
+
+@media screen and (min-width:900px) {
+    .restoran__section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card__info-description {
+        font-size: 1rem;
+    }
+
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    .hero__tagline{
+        font-size: 1.2rem;
+    }
+
+    .detail-restaurant .main-title{
+        padding: 0 2.4rem;
+    }
+
+    .detail-main .detail-main__container{
+        padding: 0 2.4rem;
+        margin-top: 20px;
+    }
+    .detail-main__review{
+        padding: 0 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}

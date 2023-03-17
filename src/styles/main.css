@@ -1,0 +1,510 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html{
+  background-color: aliceblue;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #F1FAEE;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.4rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: -140px;
+  left: 0;
+  padding: 8px;
+  background-color: #1D3557;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 
+* Header
+*/
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  color: #F1FAEE;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  padding: 14px 10px;
+}
+
+.nav{
+  height: 7.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-toggle{
+  color:#fff;
+  font-size: 2.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.6rem;
+  cursor: pointer;
+  z-index: 1500;
+}
+
+.fa-times{
+  display: none;
+}
+
+.nav-list{
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: #1D3557;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1200;
+  transform: translateX(-100%);
+  transition: transform .3s;
+}
+
+.nav::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .5s; 
+}
+
+.fa-bars{
+  font-size: 1.6rem;
+}
+
+.open .fa-times{
+  display: block;
+}
+
+.open .fa-bars{
+  display: none;
+}
+
+.open .nav-list{
+  transform: translateX(0);
+}
+
+.open .nav::before{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-item{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-link{
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 16px 0px;
+}
+
+.nav-link:hover{
+  font-weight: 600;
+}
+
+button{
+  background-color: transparent;
+  padding: 20px 20px;
+  border: none;
+}
+
+
+
+/* 
+* Hero
+*/
+
+.hero{
+  width: 100%;
+  min-height: 700px;
+  background-image: url("../public/images/heros/hero-image_4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+
+
+.hero__btn {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background-color: #1D3557;
+  color: #fff;
+  font-size: 14px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.hero__btn a{
+  padding: 16px 0;
+
+}
+
+.hero__btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #1D3557;
+  font-weight: 600;
+  transition: ease 1s;
+}
+
+/* 
+*Main
+*/
+
+
+.katalog{
+  background-color: transparent;
+  position: relative; 
+}
+
+.katalog__label {
+  padding: 40px 0 30px 0;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.restoran__section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card {
+  background-color: #1D3557;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(121, 135, 119, 0.5);
+}
+
+.card:hover {
+  transform: translate3D(0, -5px, 0);
+  transition: all 1s;
+}
+
+.card__image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all .5s;
+}
+
+.card__info-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__info{
+  padding: 20px 20px;
+}
+.card__info-name{
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.card__info-city{
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+.card__info-description {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.card_detail-restaurant{
+  margin-top: 20px;
+  padding: 10px 10px;
+  background-color: aliceblue;
+  text-align: center;
+  border-radius: 8px;
+}
+.card_detail-restaurant a{
+  color: #1D3557;
+  padding: 14px 14px;
+  font-weight: 600;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/*
+* Detail-Page
+*
+*/
+
+
+.detail-restaurant {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurant-rating {
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.detail-restaurant .detail-main__block {
+  border: 1px solid #1D3557;
+}
+
+.detail-restaurant .detail-main img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.detail-restaurant .detail-main__container{
+  padding: 1rem;
+}
+
+.detail-restaurant .detail-main__description p{
+  padding-top: 10px;
+  opacity: 0.8;
+}
+
+.detail-restaurant .detail-main__description h3{
+  color: #1D3557;
+}
+
+.detail-restaurant .detail-main-menu{
+  margin-top: 20px;
+}
+
+.detail-restaurant .detail-main-menu h3{
+  color: #1D3557;
+}
+
+.detail-restaurant .detail-main-menu__container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-restaurant .detail-main-menu__container .detail-main__menu{
+  margin-bottom: 10px;
+}
+
+.detail-restaurant .detail-main-menu__container .detail-main__menu ul li{
+  list-style: none;
+  opacity: 0.8;
+}
+
+.detail-restaurant .detail-main-menu__container .detail-main__menu p{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.detail-restaurant .detail-main-menu__container .detail-main__drinks{
+  margin-bottom: 10px;
+}
+
+.detail-restaurant .detail-main-menu__container .detail-main__drinks ul li{
+  list-style: none;
+  opacity: 0.8;
+}
+
+.detail-restaurant .detail-main-menu__container .detail-main__drinks p{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.detail-restaurant .main-title {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-restaurant .main-title h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.detail-restaurant .main-title__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.detail-restaurant .detail-sidebar {
+  padding: 1.5rem;
+  width: 100%;
+  min-width: 200px;
+}
+
+.detail-restaurant .main-navigation {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #1D3557;
+  margin: 10px 0;
+  padding: 1rem;
+}
+
+.detail-restaurant .description-container {
+  padding: 1rem;
+  border: 1px solid #1D3557;
+}
+
+.detail-restaurant .description-container h3 {
+  margin-top: 0;
+}
+
+.detail-restaurant .description-container .main-content__menu-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-restaurant .description-container .main-content__menu-container > div {
+  padding-right: 2rem;
+} 
+
+.detail-main__review{
+  padding: 1rem;
+}
+
+.detail-main__review .review__review-title{
+  color: #1D3557;
+}
+
+.review__review-container{
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+.review__review-container .review-item{
+  margin-bottom: 20px;
+}
+
+.review__review-container .review-item .review-item__name{
+  font-weight: 600;
+}
+
+.review__review-container .review-item .review-item__review{
+  font-size: 0.8rem;
+  opacity: 0.8;
+  padding-top: 10px;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #367cdc;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: px;
+  color: white;
+  cursor: pointer;
+}
+
+/*
+* Favourite
+*/
+
+.content-favourite{
+  margin-top: 120px;
+}
+
+/* 
+* Footer 
+*/
+
+footer {
+  margin-top: 20px;
+  padding: 30px 0;
+  background-color: #1D3557;
+  font-size: 0.6rem;
+  text-align: center;
+  color: #fff;
+}
+
