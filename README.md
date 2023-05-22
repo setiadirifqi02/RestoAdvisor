@@ -16,7 +16,7 @@ RestoAdvisor is a website application for providing local restaurant recommendat
 <img src="https://github.com/setiadirifqi02/RestoAdvisor/assets/110323140/650ce3dc-e26e-4f44-abee-1cb6231f7cf7" width="400" height="100%" >
 
 
-- Detail Reststaurant Page
+- Detail Restaurant Page
 
 <img src="https://github.com/setiadirifqi02/RestoAdvisor/assets/110323140/7b50576e-83c2-4fcd-b2e6-9ef5e08637ef" width="400" height="100%" >
 
