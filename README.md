@@ -11,7 +11,19 @@ RestoAdvisor is a website application for providing local restaurant recommendat
 - Progressive Web App
 ---
 ### Screen Shots
+- Home Page
 
+<img src="https://github.com/setiadirifqi02/RestoAdvisor/assets/110323140/650ce3dc-e26e-4f44-abee-1cb6231f7cf7" width="400" height="100%" >
+
+
+- Detail Reststaurant Page
+
+<img src="https://github.com/setiadirifqi02/RestoAdvisor/assets/110323140/7b50576e-83c2-4fcd-b2e6-9ef5e08637ef" width="400" height="100%" >
+
+
+- Favourtie Restaurant Page
+
+<img src="https://github.com/setiadirifqi02/RestoAdvisor/assets/110323140/89b10989-10b9-4691-bc7c-c66f9eb5058f" width="400" height="100%" >
 
 
 ### Available Scripts
